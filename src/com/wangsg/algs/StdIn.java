@@ -510,6 +510,7 @@ public final class StdIn {
 
    /**
      * Reads all remaining tokens and returns them as an array of strings.
+ * @param string 
      * @return all remaining tokens, as an array of strings
      * @deprecated Replaced by {@link #readAllStrings()}.
      */

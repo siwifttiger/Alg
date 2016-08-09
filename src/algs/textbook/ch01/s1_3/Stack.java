@@ -5,6 +5,7 @@ import java.util.Iterator;
 import com.wangsg.algs.In;
 import com.wangsg.algs.StdOut;
 
+
 public class Stack<Item> implements Iterable<Item> {
 	private Node first;
 	private int size;
@@ -42,6 +43,7 @@ public class Stack<Item> implements Iterable<Item> {
 		return size == 0;
 	}
 	
+
 	
 
 	@Override
@@ -70,7 +72,7 @@ public class Stack<Item> implements Iterable<Item> {
 	public static void main(String[] args) {
 		Stack<String> s;
 		s = new Stack<String>();
-		String[] items = In.readStrings("http://algs4.cs.princeton.edu/13stacks/tobe.txt");
+		/*String[] items = In.readStrings("http://algs4.cs.princeton.edu/13stacks/tobe.txt");
 		for(int i = 0; i < items.length; i++){
 			String a = items[i];
 			if(!a.equals("-"))
@@ -80,6 +82,12 @@ public class Stack<Item> implements Iterable<Item> {
 		StdOut.println("(" + s.size() + " left on stack)");
 		for(String a:s){
 			StdOut.println(a);
-		}
+		}*/
+		s.push("it");
+		s.push("was");
+		s.push("time");
+	
+		for(String t:s)
+			StdOut.println(t);
 	}
 }

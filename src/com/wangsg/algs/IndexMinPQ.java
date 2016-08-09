@@ -12,6 +12,8 @@ package com.wangsg.algs;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
+//import algs.textbook.ch02.s2_4.IndexMinPQ;
+
 /**
  *  The <tt>IndexMinPQ</tt> class represents an indexed priority queue of generic keys.
  *  It supports the usual <em>insert</em> and <em>delete-the-minimum</em>
@@ -287,6 +289,22 @@ public class IndexMinPQ<Key extends Comparable<Key>> implements Iterable<Integer
         }
     }
 
+	
+	public void ShowIndex(){
+		for(int i = 1; i <= N; i++ ){
+			StdOut.println("pq:"+ i+" "+pq[i]);
+		}
+		for(int i = 0; i < N; i++){
+			StdOut.println("qp:" + i + " "+ qp[i]);
+		}
+		
+	}
+	
+	public void showKeys(){
+		for(int i = 0; i < N; i++){
+			StdOut.println("keys" + i + " "+keys[pq[i+1]]);
+		}
+	}
 
    /***************************************************************************
     * Iterators.
@@ -328,7 +346,7 @@ public class IndexMinPQ<Key extends Comparable<Key>> implements Iterable<Integer
      */
     public static void main(String[] args) {
         // insert a bunch of strings
-        String[] strings = { "it", "was", "the", "best", "of", "times", "it", "was", "the", "worst" };
+        /*String[] strings = { "it", "was", "the", "best", "of", "times", "it", "was", "the", "worst" };
 
         IndexMinPQ<String> pq = new IndexMinPQ<String>(strings.length);
         for (int i = 0; i < strings.length; i++) {
@@ -353,7 +371,17 @@ public class IndexMinPQ<Key extends Comparable<Key>> implements Iterable<Integer
         }
         while (!pq.isEmpty()) {
             pq.delMin();
-        }
+        }*/
+		IndexMinPQ<String> iPQ= new IndexMinPQ<String>(7);
+		iPQ.insert(0, "G");
+		iPQ.insert(1, "F");
+		iPQ.insert(2, "E");
+		iPQ.insert(3, "A");
+		iPQ.insert(4, "B");
+		iPQ.insert(5, "D");
+		iPQ.insert(6, "C");
+		iPQ.ShowIndex();
+		iPQ.showKeys();
 
     }
 }
