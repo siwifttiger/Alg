@@ -15,11 +15,11 @@ public class DirectedEdge {
 		return weight;
 	}
 	
-	int from(){
+	public int from(){
 		return v;
 	}
 	
-	int to() {
+	public int to() {
 		return w;
 	}
 	
